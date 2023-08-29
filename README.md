@@ -1,3 +1,7 @@
+На основе Диаграмы классов ModelElements, разработать классы: Model Store, PoligonalModel (Texture, Poligon), Flash, Camera, Scene
+
+![Скриншот по теме Архитектура ПО. Диаграмма UML к семинару.](./UML.png)
+
 ## Getting Started
 
 Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
