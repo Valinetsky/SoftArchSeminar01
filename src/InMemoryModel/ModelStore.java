@@ -1,5 +1,12 @@
 package InMemoryModel;
 
+import ModelElements.PoligonalModel;
+import ModelElements.Poligon;
+import ModelElements.Scene;
+import ModelElements.Flash;
+import ModelElements.Camera;
+import ModelElements.Texture;
+
 public class ModelStore implements IModelChanger {
 	public PoligonalModel models;
 	public Scene scenes;
@@ -10,11 +17,11 @@ public class ModelStore implements IModelChanger {
 	public ModelStore(IModelChangeObserver changeObserver) {
 		this.changeObserver = changeObserver;
 
-		this.models = new PoligonalModel(new Poligone());
+		this.models = new PoligonalModel(new Poligon(null), new Texture());
 		this.flashes = new Flash();
-		this.cameras = new Camera();
+		this.cameras = new Camera(null, null);
 
-		this.scenes = new Scene(this.models, this.flashes, this.cameras);
+		this.scenes = new Scene(0, models, flashes, cameras);
 	}
 
 	public Scene getScene(int n) {
